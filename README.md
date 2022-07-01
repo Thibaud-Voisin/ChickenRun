@@ -15,7 +15,7 @@ The endpoints are the following :
 
 ### USAGE 
 
-To use the application you must start by getting all the required modules, you can install them by typing the `npm install` command.
+To use the application you must start by getting all the required modules, you can install them by typing the `npm install` command on the src folder.
 
 When this is done, you must create a PostGres database. To do that, install and configure PostGres on your machine, then, you can open the init_database.js file, at the end of this file, you will see this line `main("postgres", "localhost", "rootpass", 5432)`, replace these informations with the ones of you PostGres session.
 Then, run this script with `node init_database.js`, this will create the database and the table needed by the application. 
