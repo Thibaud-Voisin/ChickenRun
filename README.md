@@ -1,11 +1,21 @@
 # ChickenRun
-Chicken Run API for Clac des Doigts
+Chicken Run is a JavaScript API for Clac des Doigts
 
 This API provides endpoints to create, modify, delete and make run a chicken.
 
 The endpoints are the following :
-- GET    ('/chicken') -> Return return all chicken details (Name, BirthDay, Weight, Steps, isRunning)
+<pre>
+- GET    ('/chicken') -> Return all chicken details (Name, BirthDay, Weight, Steps, isRunning)
 - POST   ('/chicken') -> Create a new chicken if none exists; Minimal parameters required are Name and Weight
-- PUT    ('/chicken') -> Create a new Chicken if none exist; else, update it
+- PUT    ('/chicken') -> Create a new Chicken if none exist, else update it
 - PATCH  ('/chicken') -> Update the existing chicken with the given parameters
 - DELETE ('/chicken') -> Delete the existing chicken
+- *  ('/chicken/run') -> Can take all differents HTTP methods, set the isRunning boolean on True and increment the steps of the chicken
+</pre>
+
+### USAGE 
+
+To use the application, you must create a postgres database. To do that, install and configure postgres on your machine, then, you can open the init_database.js file, at the end of this file, you will see this line `main("postgres", "localhost", "rootpass", 5432)`, replace these informations with the ones of you postgres session.
+Then, run this script with `node init_database.js`, this will create the database and the table needed by the application. 
+
+Once your database is done, you can start the main app, same process here, you will find `chicken_run("postgres", "localhost", "rootpass", 5432, 3000)` at the end of the Chicken_run_API.js file, enter your informations and you would then be able to run the ChickenRun app with `node Chicken_run_API.js` !!
