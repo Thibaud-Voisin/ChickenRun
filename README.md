@@ -1,8 +1,7 @@
 # ChickenRun
-Chicken Run is a JavaScript API for Clac des Doigts
-The application uses Express and PostGres frameworks
+Chicken Run is a JavaScript API for Clac des Doigts.
 
-This API provides endpoints to create, modify, delete and make run a chicken.
+The application uses Express and PostGres frameworks, it provides endpoints to create, modify, delete and make run a chicken.
 
 The endpoints are the following :
 <pre>
